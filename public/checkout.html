@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Digibuy</a>
+      <nav class="nav">
+        <a href="/products">Products</a>
+        <a href="/cart">Cart (<span id="cartCount">0</span>)</a>
+      </nav>
+    </header>
+
+    <main class="container checkout">
+      <h2 class="page-title">Checkout</h2>
+
+      <form id="checkoutForm" class="panel" autocomplete="off">
+        <h3>Contact & Shipping</h3>
+
+        <label>
+          Full name
+          <input name="name" required placeholder="Jane Doe" />
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" required placeholder="jane@example.com" />
+        </label>
+
+        <label>
+          Address
+          <textarea name="address" required rows="3" placeholder="123 Market St, City"></textarea>
+        </label>
+
+        <button class="button" type="submit">Place order</button>
+        <div id="formMsg" class="msg" aria-live="polite"></div>
+      </form>
+
+      <aside class="panel">
+        <h3>Order summary</h3>
+<div class="summary-row"><span>Subtotal</span><span id="sumSubtotal">₹0.00</span></div>
+<div class="summary-row"><span>Tax</span><span id="sumTax">₹0.00</span></div>
+<div class="summary-row"><span>Shipping</span><span id="sumShipping">₹0.00</span></div>
+<div class="summary-row total"><span>Total</span><span id="sumTotal">₹0.00</span></div>
+      </aside>
+    </main>
+
+<!-- footer removed -->
+
+    <script type="module" src="/js/checkout.js"></script>
+  </body>
+</html>
+

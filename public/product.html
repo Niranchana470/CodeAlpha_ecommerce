@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Digibuy</a>
+      <nav class="nav">
+        <a href="/products">Products</a>
+        <a href="/cart">Cart (<span id="cartCount">0</span>)</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <button class="link" onclick="history.back()">← Back</button>
+      <div class="product-wrap">
+        <div class="product-media">
+          <img id="productImage" alt="Product image" />
+        </div>
+        <div class="product-details">
+          <h2 id="productName"></h2>
+          <p class="muted" id="productDescription"></p>
+          <div class="price" id="productPrice"></div>
+
+          <form id="addToCartForm" class="form-row" autocomplete="off">
+            <label>
+              Quantity
+              <input id="quantity" type="number" min="1" value="1" />
+            </label>
+            <button class="button" type="submit">Add to cart</button>
+          </form>
+
+          <div class="stock" id="stockNote"></div>
+          <div id="msg" class="msg" aria-live="polite"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">Demo e-commerce with Express + vanilla JS</footer>
+
+    <script type="module" src="/js/product.js"></script>
+  </body>
+</html>
+

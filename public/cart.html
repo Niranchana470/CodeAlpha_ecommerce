@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Digibuy</a>
+      <nav class="nav">
+        <a href="/products">Products</a>
+        <a href="/cart">Cart (<span id="cartCount">0</span>)</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2 class="page-title">Cart</h2>
+
+      <div id="cartEmpty" class="empty-state" style="display:none">
+        Your cart is empty. <a href="/products">Browse products</a>.
+      </div>
+
+      <div class="table" id="cartTable" style="display:none">
+        <div class="thead">
+          <div>Product</div>
+          <div>Price</div>
+          <div>Qty</div>
+          <div>Line total</div>
+          <div></div>
+        </div>
+        <div id="cartRows" class="tbody"></div>
+      </div>
+
+      <div class="totals" id="cartTotals" style="display:none">
+        <div class="totals-row">
+          <span>Subtotal</span><span id="subtotal">₹0.00</span>
+        </div>
+        <div class="totals-row">
+<span>Tax (8%)</span><span id="tax">₹0.00</span>
+        </div>
+        <div class="totals-row">
+<span>Shipping</span><span id="shipping">₹0.00</span>
+        </div>
+        <div class="totals-row total">
+<span>Total</span><span id="total">₹0.00</span>
+        </div>
+
+        <a class="button" href="/checkout">Checkout</a>
+      </div>
+
+      <div id="cartMsg" class="msg" aria-live="polite"></div>
+    </main>
+
+    <footer class="footer">Demo e-commerce with Express + vanilla JS</footer>
+
+    <script type="module" src="/js/cart.js"></script>
+  </body>
+</html>
+

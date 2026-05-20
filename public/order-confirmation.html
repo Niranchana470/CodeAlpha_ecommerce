@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Order confirmed</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Digibuy</a>
+      <nav class="nav">
+        <a href="/products">Products</a>
+        <a href="/cart">Cart (<span id="cartCount">0</span>)</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2 class="page-title">Order confirmed ✅</h2>
+      <div class="panel">
+        <div><strong>Order ID:</strong> <span id="orderId"></span></div>
+        <div class="muted" id="orderMeta" style="margin-top:6px"></div>
+
+        <h3 style="margin-top:18px">Items</h3>
+        <div id="items" class="summary-list"></div>
+
+        <h3 style="margin-top:18px">Total</h3>
+        <div class="summary-row total"><span>Paid</span><span id="paidTotal">₹0.00</span></div>
+
+        <a class="button" href="/products" style="margin-top:14px">Continue shopping</a>
+      </div>
+    </main>
+
+
+
+    <script type="module" src="/js/order-confirmation.js"></script>
+  </body>
+</html>
+
