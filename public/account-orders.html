@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Orders - Digibuy</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Digibuy</a>
+      <nav class="nav">
+        <a href="/products">Products</a>
+        <a href="/cart">Cart (<span id="cartCount">0</span>)</a>
+        <a href="/account-orders">My Orders</a>
+        <a href="/login" id="linkLogin" style="display:none">Login</a>
+        <button class="link" id="btnLogout" style="display:none">Logout</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2 class="page-title">My Orders</h2>
+
+      <div id="notLoggedIn" class="empty-state" style="display:none">
+        Please <a href="/login">login</a> to view your orders.
+      </div>
+
+      <div id="ordersList" style="display:none" class="panel">
+        <div style="font-weight:900; margin-bottom:12px">Order history</div>
+        <div id="orders" class="summary-list"></div>
+      </div>
+
+      <div id="msg" class="msg" aria-live="polite"></div>
+    </main>
+
+    <footer class="footer">Demo e-commerce with Express + vanilla JS</footer>
+
+    <script type="module" src="/js/auth-ui.js"></script>
+    <script type="module" src="/js/account-orders.js"></script>
+  </body>
+</html>
+
